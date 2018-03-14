@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Session Views', type: :view do
+RSpec.describe 'Views', type: :view do
   describe 'homepage' do
     it "should show a login link if the user is not logged in" do
       visit '/'
