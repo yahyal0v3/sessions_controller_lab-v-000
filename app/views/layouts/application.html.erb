@@ -8,16 +8,11 @@
 </head>
 <body>
   <header>
-    <% if session[:name] %>
-      <h1>Hi, <%= session[:name] %>.</h1>
-      <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
-        <input type=submit value='logout'>
+      <% if session[:name] %>
+        <a href="/logout">Logout</a>
+      <% else %>
+        <a href="/login">Login</a>
       <% end %>
-    <% else %>
-      <%= form_tag ({controller: 'sessions', action: 'new', method: 'post'}) do %>
-        <input type=submit value='login'>
-      <% end %>
-    <% end %>
   </header>
 
 <%= yield %>
