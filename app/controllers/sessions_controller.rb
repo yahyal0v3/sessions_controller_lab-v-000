@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     if params[:name] && params[:name] != ""
-      session[:name] = params[:name]
+      sessions[:name] = params[:name]
     else
       redirect_to sessions_new 
     end
